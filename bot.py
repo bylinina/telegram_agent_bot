@@ -23,7 +23,7 @@ MODEL_ID = "Qwen/Qwen3-Coder-Next"
 
 # Build model + agent
 
-model = InferenceClientModel(model_id=MODEL)
+model = InferenceClientModel(model_id=MODEL_ID)
 
 agent = ToolCallingAgent(model=model,
                          tools=[WebSearchTool()],
