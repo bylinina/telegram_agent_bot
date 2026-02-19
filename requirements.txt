@@ -1,0 +1,4 @@
+smolagents
+python-telegram-bot
+nest_asyncio
+huggingface_hub
