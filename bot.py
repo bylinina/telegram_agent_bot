@@ -24,11 +24,10 @@ MODEL_ID="moonshotai/Kimi-K2-Instruct"
 
 # Build model + agent
 
-model = InferenceClientModel(model_id=MODEL_ID)
+model = InferenceClientModel(model_id=MODEL_ID, provider="novita"))
 
 agent = ToolCallingAgent(model=model,
-                         tools=[WebSearchTool()],
-                         provider="novita") # kill this if you're happy with the default
+                         tools=[WebSearchTool()])
                          # max_steps=2) # maybe i'll just let it work for as long as it needs
 #
 # Memory store per user
