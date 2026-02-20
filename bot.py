@@ -24,7 +24,7 @@ MODEL_ID="moonshotai/Kimi-K2-Instruct"
 
 # Build model + agent
 
-model = InferenceClientModel(model_id=MODEL_ID, provider="novita"))
+model = InferenceClientModel(model_id=MODEL_ID, provider="novita")
 
 agent = ToolCallingAgent(model=model,
                          tools=[WebSearchTool()])
