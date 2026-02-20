@@ -19,7 +19,8 @@ TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 HF_TOKEN = os.environ["HF_TOKEN"]
 
 # Model ID you are happy with
-MODEL_ID = "Qwen/Qwen3-Coder-Next"
+# MODEL_ID = "Qwen/Qwen3-Coder-Next"
+MODEL_ID="moonshotai/Kimi-K2-Instruct"
 
 # Build model + agent
 
@@ -27,7 +28,8 @@ model = InferenceClientModel(model_id=MODEL_ID)
 
 agent = ToolCallingAgent(model=model,
                          tools=[WebSearchTool()],
-                         max_steps=2)
+                         provider="novita") # kill this if you're happy with the default
+                         # max_steps=2) # maybe i'll just let it work for as long as it needs
 #
 # Memory store per user
 #
